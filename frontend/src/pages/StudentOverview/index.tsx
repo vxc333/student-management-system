@@ -9,11 +9,11 @@ export default function StudentOverview() {
       </aside>
       <section>
         <h1>Alunos</h1>
-        <div>
-          <Input/>
+        <div className="flex">
+          <Input/> 
           <Button> Adicionar Novo Aluno </Button>
         </div>
-        <div className="flex">
+        <div className="flex justify-between px-20 bg-zinc-200">
           <h3>Nome</h3>
           <h3>Idade</h3>
           <h3>Curso</h3>
@@ -26,5 +26,5 @@ export default function StudentOverview() {
         </div>
       </section>
     </main>
-  )
+  );
 }
