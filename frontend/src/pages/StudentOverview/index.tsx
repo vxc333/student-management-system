@@ -11,9 +11,9 @@ export default function StudentOverview() {
         <h1>Alunos</h1>
         <div>
           <Input/>
-          <Button/>
+          <Button> Adicionar Novo Aluno </Button>
         </div>
-        <div>
+        <div className="flex">
           <h3>Nome</h3>
           <h3>Idade</h3>
           <h3>Curso</h3>

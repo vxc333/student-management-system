@@ -1,5 +1,9 @@
+import StudentOverview from "./pages/StudentOverview";
+
 function App() {
-  return <div>test</div>;
+  return (
+    <StudentOverview/>
+  )
 }
 
 export default App;
