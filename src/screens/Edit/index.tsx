@@ -9,6 +9,9 @@ const item = {
   register: "1231654",
 };
 
+import back from "../../../assets/icons/arrow_back.png";
+import desfazer from "../../../assets/icons/undo.png";
+import check from "../../../assets/icons/check.png";
 const Edit = () => {
   return (
     <div className="flex-1 max-w-[1440px] h-screen p-10 bg-green-100">
@@ -16,9 +19,14 @@ const Edit = () => {
         <h1 className="text-green-700 font-semibold text-2xl">
           Atualizar dados do aluno
         </h1>
-        <div className="w-fit border border-green-700 bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700">
+        <div>
           <Link to={".."}>
-            <span>Voltar para lista de alunos</span>
+            <DefaultButton
+              text={"Voltar para lista de alunos"}
+              primary={true}
+              onClick={() => {}}
+              icon={back}
+            />
           </Link>
         </div>
       </div>
@@ -69,11 +77,17 @@ const Edit = () => {
             </div>
           </div>
           <div className="w-[50%] flex flex-row justify-center gap-x-2">
-            <DefaultButton text="Salvar" primary onClick={() => {}} />
+            <DefaultButton
+              text="Salvar"
+              primary
+              onClick={() => {}}
+              icon={check}
+            />
             <DefaultButton
               text="Desfazer alterações"
               primary={false}
               onClick={() => {}}
+              icon={desfazer}
             />
           </div>
         </div>

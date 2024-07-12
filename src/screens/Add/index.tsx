@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import DefaultButton from "../../components/DefaultButton";
 
-interface Student {
+export interface Student {
   id: string;
   name: string;
   age: string;
