@@ -25,7 +25,7 @@ import Search from "../../components/Search";
 
 const Home = () => {
   return (
-    <div className="flex-1 max-w-[1440px] h-screen p-10  bg-green-100">
+    <div className="flex-1 mx-auto max-w-[1440px] h-screen p-10  bg-green-100">
       <div className="mb-2.5 flex flex-row justify-between ">
         <h1 className="text-green-700 font-semibold text-2xl">
           Sistema de gerenciamento de alunos
