@@ -15,7 +15,7 @@ interface TextProps {
 
 const Text = ({ value }: TextProps) => {
   return (
-    <h5 className="w-48 text-center text-md font-medium text-green-700 ">
+    <h5 className="w-full md:w-48 text-center text-md font-medium text-green-700">
       {value}
     </h5>
   );
@@ -25,13 +25,13 @@ export default function Card({ item }: CardProps) {
   return (
     <div
       id={item.id}
-      className=" w-full flex flex-row justify-between rounded-xl items-center p-2 bg-white mb-2.5"
+      className="w-full flex flex-col md:flex-row justify-between rounded-xl items-center p-2 bg-white mb-2.5"
     >
       <Text value={item.name} />
       <Text value={item.age} />
       <Text value={item.course} />
       <Text value={item.register} />
-      <div className=" w-[20%] flex justify-around">
+      <div className="w-full md:w-[20%] flex justify-center md:justify-around">
         <Link to={`/edit/${item.id}`}>
           <DefaultButton
             text={"Editar"}

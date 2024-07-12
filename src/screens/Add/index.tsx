@@ -9,6 +9,10 @@ export interface Student {
   register: string;
 }
 
+import back from "../../../assets/icons/arrow_back.png";
+import add from "../../../assets/icons/check.png";
+import cancel from "../../../assets/icons/close.png";
+
 const Add = () => {
   return (
     <div className="flex-1 max-w-[1440px] h-screen p-10 bg-green-100">
@@ -21,6 +25,7 @@ const Add = () => {
             text={"Voltar para a lista de alunos"}
             primary
             onClick={() => {}}
+            icon={back}
           />
         </Link>
       </div>
@@ -67,12 +72,18 @@ const Add = () => {
             </div>
           </div>
           <div className="w-[50%] flex flex-row justify-center gap-x-2">
-            <button className="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700">
-              Adicionar
-            </button>
-            <button className=" bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700">
-              Cancelar
-            </button>
+            <DefaultButton
+              text={"Adicionar"}
+              primary
+              onClick={() => {}}
+              icon={add}
+            />
+            <DefaultButton
+              text={"Cancelar"}
+              primary={false}
+              onClick={() => {}}
+              icon={cancel}
+            />
           </div>
         </div>
       </div>
