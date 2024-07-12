@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import DefaultButton from "../../components/DefaultButton";
+
 const Data = [
   {
     id: "1",
@@ -18,10 +21,17 @@ const Data = [
 const Home = () => {
   return (
     <div className="flex-1 max-w-[1440px] h-screen p-10 border border-red-500 bg-green-100">
-      <div className="mb-2.5">
+      <div className="mb-2.5 flex flex-row justify-between border border-red-500">
         <h1 className="text-green-700 font-semibold text-2xl">
           Sistema de gerenciamento de alunos
         </h1>
+        <Link to={`/add`}>
+          <DefaultButton
+            text={"Adicionar novo aluno"}
+            primary
+            onClick={() => {}}
+          />
+        </Link>
       </div>
       <div>
         <div className="w-fit border border-red-500 mb-10 rounded-xl">
@@ -68,13 +78,16 @@ const Home = () => {
               <h5 className="w-48 text-center text-md font-medium border border-red-500 text-white">
                 {item.register}
               </h5>
-              <div className="border border-blue-500 w-[20%] flex justify-center">
-                <button className="border w-[40%] border-blue-500 text-md font-medium text-white">
-                  <span>Editar</span>
-                </button>
-                <button className="border w-[40%] border-blue-500 text-md font-medium text-white">
-                  <span>Excluir</span>
-                </button>
+              <div className="border border-blue-500 w-[20%] flex justify-around">
+                <Link to={`/edit/${item.id}`}>
+                  <DefaultButton text={"Editar"} primary onClick={() => {}} />
+                </Link>
+
+                <DefaultButton
+                  text={"Excluir"}
+                  primary={false}
+                  onClick={() => {}}
+                />
               </div>
             </div>
           ))}
