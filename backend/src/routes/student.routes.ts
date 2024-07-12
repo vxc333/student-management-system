@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import * as studentController from '/home/hipolito/restful-api-node-typescript/src/controllers/ClientController';
+import * as studentController from '../controllers/ClientController';
 
 const router = Router();
 
