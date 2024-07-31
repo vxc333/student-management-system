@@ -1,18 +1,16 @@
 import { prisma } from "../database";
 
 class StudentService {
-  async createStudent(data: { name: string; email: string ; age: number}) {
-    const { name, email , age } = data;
-    const studentExist = await prisma.student.findUnique({
-      where: { email },
-    });
-
-    if (studentExist) {
-      throw new Error("Erro: Email já existe!");
-    }
+  async createStudent(data: {
+    name: string;
+    age: string;
+    course: string;
+    register: string;
+  }) {
+    const { name, age, course, register } = data;
 
     const student = await prisma.student.create({
-      data: { name, email , age},
+      data: { name, age, course, register },
     });
 
     return student;
@@ -40,8 +38,16 @@ class StudentService {
     return students;
   }
 
-  async updateStudent(id: number, data: { name: string; email: string ; age: number}) {
-    const { name, email,age } = data;
+  async updateStudent(
+    id: number,
+    data: {
+      name: string;
+      age: string;
+      course: string;
+      register: string;
+    }
+  ) {
+    const { name, age, course, register } = data;
 
     const studentExist = await prisma.student.findUnique({
       where: { id },
@@ -51,17 +57,9 @@ class StudentService {
       throw new Error("Error: Estudante não encontrado!");
     }
 
-    const existingEmail = await prisma.student.findUnique({
-      where: { email },
-    });
-
-    if (existingEmail && existingEmail.id !== id) {
-      throw new Error("Erro: Email já existe!");
-    }
-
     const updatedStudent = await prisma.student.update({
       where: { id },
-      data: { name, email , age},
+      data: { name, age, course, register },
     });
 
     return updatedStudent;
