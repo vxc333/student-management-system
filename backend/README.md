@@ -1,4 +1,4 @@
-# CRUD de Clientes usando TypeScript, Prisma e Express
+# CRUD de Estudante usando TypeScript, Prisma e Express
 
 Este projeto consiste em um CRUD (Create, Read, Update, Delete) para o cadastro de clientes. Utiliza TypeScript para garantir tipagem estática, Prisma como ORM para interagir com o banco de dados, e Express como framework web.
 
@@ -13,24 +13,22 @@ Este projeto consiste em um CRUD (Create, Read, Update, Delete) para o cadastro 
 1. Clone o repositório:
 
     ```bash
-    git clone https://github.com/vxc333/restful-api-node-typescript.git
+    git clone https://github.com/vxc333/student-management-system.git
     ```
 
 2. Instale as dependências:
 
     ```bash
-    cd restful-api-node-typescript
-    npm install @prisma/client@^5.5.2 @types/express@^4.17.21 express@^4.18.2 --save
-    
-    npm install @types/node@^20.9.0 prisma@^5.5.2 ts-node-dev@^2.0.0 typescript@^5.2.2 --save-dev
+    cd backend
+    npm install
     ```
 
     ou
 
     ```bash
-    yarn add @prisma/client@^5.5.2 @types/express@^4.17.21 express@^4.18.2
+    cd backend
     
-    yarn add @types/node@^20.9.0 prisma@^5.5.2 ts-node-dev@^2.0.0 typescript@^5.2.2 --dev
+    yarn install
     ```
 3. Inicialize o Typescript
     ```
@@ -62,20 +60,22 @@ Este projeto consiste em um CRUD (Create, Read, Update, Delete) para o cadastro 
 
 ## Rotas
 
-- **GET /usuarios**: Retorna a lista de todos os clientes.
-- **GET /usuarios/:id**: Retorna os detalhes de um cliente específico.
-- **POST /usuarios**: Cadastra um novo cliente. Envie um corpo JSON com "nome" e "email".
-- **PUT /usuarios/id**: Atualiza os dados de um cliente específico. Envie um corpo JSON com os campos a serem atualizados.
-- **DELETE /usuarios/:id**: Exclui um cliente específico.
+- **GET /estudantes**: Retorna a lista de todos os estudante.
+- **GET /estudantes/:id**: Retorna os detalhes de um estudante específico.
+- **POST /estudantes**: Cadastra um novo estudante.
+- **PUT /estudantes/id**: Atualiza os dados de um estudante específico. Envie um corpo JSON com os campos a serem atualizados.
+- **DELETE /estudantes/:id**: Exclui um estudante específico.
 
 ## Estrutura do Banco de Dados
 
-O banco de dados contém uma tabela `clientes` com os seguintes campos:
+O banco de dados contém uma tabela `estudantes` com os seguintes campos:
 
-- `id` (chave primária)
-- `nome` (nome do cliente)
-- `email` (e-mail único do cliente)
-
+- `id` (chave estudante)
+- `name` (nome do estudante)
+- `age` (idade do estudante)
+- `course` (curso do estudante)
+- `register` (número de registro do estudante)
+- 
 Certifique-se de que seu banco de dados PostgreSQL esteja configurado corretamente.
 
 ## Contribuição
