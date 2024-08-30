@@ -75,7 +75,7 @@ O banco de dados contém uma tabela `estudantes` com os seguintes campos:
 - `age` (idade do estudante)
 - `course` (curso do estudante)
 - `register` (número de registro do estudante)
-- 
+  
 Certifique-se de que seu banco de dados PostgreSQL esteja configurado corretamente.
 
 ## Contribuição
